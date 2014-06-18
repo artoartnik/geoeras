@@ -185,6 +185,10 @@ class Date
     (time_period_start..time_period_end).cover?(self)
   end
 
+  def after_dinosaurs?
+    self > Date.million_years_ago(65)
+  end
+
   GEOLOGIC_TIME_PERIODS.each do |time_period|
     define_method("in_#{time_period[:name].downcase.tr(' ', '_')}?") { in_geologic_time_range?(time_period[:eag], time_period[:lag]) }
   end
