@@ -176,7 +176,7 @@ class Date
   end
 
   def self.million_years_ago(years)
-    Date.geologic_present - years*365*1000000
+    Date.geologic_present - (years*365*1000000).to_i
   end
 
   def in_geologic_time_range?(million_years_start, million_years_end)
@@ -186,6 +186,6 @@ class Date
   end
 
   GEOLOGIC_TIME_PERIODS.each do |time_period|
-    define_method("in_#{time_period[:name].downcase.tr!(' ', '_')}?") { in_geologic_time_range?(time_period[:eag], time_period[:lag]) }
+    define_method("in_#{time_period[:name].downcase.tr(' ', '_')}?") { in_geologic_time_range?(time_period[:eag], time_period[:lag]) }
   end
 end
