@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'geoeras'
-  s.version     = '0.0.0'
-  s.date        = '2014-06-17'
+  s.version     = '0.0.1'
+  s.date        = '2014-06-18'
   s.summary     = "Geologic Eras"
   s.description = "A gem that adds geologic time related methods to Date"
   s.authors     = ["Martin Artnik"]
